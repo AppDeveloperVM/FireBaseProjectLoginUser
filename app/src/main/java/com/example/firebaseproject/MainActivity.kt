@@ -140,7 +140,12 @@ class MainActivity : AppCompatActivity() {
         if( user != null ) {
             tvText.text = "Email usuari: ${user.email} $type_string"
         }else{
-            tvText.text = "No s'ha identificat"
+            if(type == "create"){
+                tvText.text = "Aquest usuari ya existeix."
+            }else{
+                tvText.text = "No s'ha identificat"
+            }
+
         }
     }
 
