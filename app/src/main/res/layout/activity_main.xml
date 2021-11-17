@@ -62,4 +62,14 @@
         app:layout_constraintEnd_toEndOf="@+id/pass_txt"
         app:layout_constraintStart_toEndOf="@+id/pass_txt" />
 
+    <Button
+        android:id="@+id/rtdatabase_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="56dp"
+        android:text="RT DT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

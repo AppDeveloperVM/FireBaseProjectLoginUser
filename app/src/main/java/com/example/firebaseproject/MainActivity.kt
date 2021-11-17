@@ -2,6 +2,7 @@ package com.example.firebaseproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils.isEmpty
 import android.util.Log
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     // [END declare_auth]
     private lateinit var tvText : TextView
     private lateinit var signbtn : Button
+    private lateinit var rtdatabase_btn : Button
     private lateinit var createbtn : Button
     private lateinit var email_txt : TextView
     private lateinit var pass_txt : TextView
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         tvText = findViewById(R.id.tvText)
         signbtn = findViewById(R.id.sign_btn)
         createbtn = findViewById(R.id.create_btn)
+        rtdatabase_btn = findViewById(R.id.rtdatabase_btn)
         email_txt = findViewById(R.id.email_txt)
         pass_txt = findViewById(R.id.pass_txt)
 
@@ -61,6 +64,11 @@ class MainActivity : AppCompatActivity() {
             }else {
                 Toast.makeText(applicationContext, "Faltan datos", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        rtdatabase_btn.setOnClickListener{
+            var intent = Intent(this, RtDatabase::class.java)
+            startActivity(intent)
         }
 
 
